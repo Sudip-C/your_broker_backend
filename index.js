@@ -2,6 +2,7 @@ const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+require("dotenv").config()
 
 const app = express();
 
@@ -197,7 +198,7 @@ app.post('/api/orders', (req, res) => {
         });
     }
 });
-const PORT =3307|| 3310
+const PORT =process.env.PORT|| 3310
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 
