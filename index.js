@@ -2,17 +2,17 @@ const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-require("dotenv").config()
+require('dotenv').config()
 
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
 
-const db = mysql.createConnection({
+   const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Su4ip@123',
+    password: 'Su4ip_123',
     database: 'order_matching'
 });
 
@@ -198,8 +198,8 @@ app.post('/api/orders', (req, res) => {
         });
     }
 });
-const PORT =process.env.PORT|| 3310
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
 
+const PORT = 3300
+app.listen((PORT), () => {
+    console.log(`Server running on port ${PORT}`)
 });
